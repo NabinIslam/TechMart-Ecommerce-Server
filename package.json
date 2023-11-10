@@ -1,0 +1,21 @@
+{
+  "name": "techmart-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon ./src/server.js",
+    "start": "node ./src/server.js",
+    "deploy": "vercel --prod"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "mongoose": "^8.0.0",
+    "slugify": "^1.6.6"
+  }
+}
