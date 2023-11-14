@@ -3,7 +3,7 @@ const {
   getCategories,
 } = require('../services/categoryService');
 
-const handleCreateCategory = async (req, res, next) => {
+const handleCreateCategory = async (req, res) => {
   try {
     const { name } = req.body;
 
@@ -26,7 +26,7 @@ const handleGetCategory = async (req, res) => {
 
     return res.status(200).send({
       message: `Categories fetched successfully`,
-      payload: categories,
+      categories: categories,
     });
   } catch (error) {
     return res.status(400).send({
