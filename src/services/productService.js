@@ -14,7 +14,7 @@ const createProduct = async productData => {
     name,
     slug: slugify(name),
     price,
-    image: image.filename,
+    image: `https://techmart-nwa5.onrender.com/public/images/products/${image.filename}`,
     status,
     category,
     brand,
