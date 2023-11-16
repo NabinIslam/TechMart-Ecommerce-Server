@@ -16,8 +16,8 @@ const productSchema = new Schema(
       unique: true,
     },
     image: {
-      type: Buffer,
-      contentType: String,
+      type: String,
+      required: [true, 'Product image is required'],
     },
     price: {
       type: Number,

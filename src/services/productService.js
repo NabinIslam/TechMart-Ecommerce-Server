@@ -2,8 +2,7 @@ const slugify = require('slugify');
 const Product = require('../models/productModel');
 
 const createProduct = async productData => {
-  const { name, price, imageBufferString, status, category, brand } =
-    productData;
+  const { name, price, image, status, category, brand } = productData;
 
   const productExists = await Product.exists({ name: name });
 
@@ -15,7 +14,7 @@ const createProduct = async productData => {
     name,
     slug: slugify(name),
     price,
-    image: imageBufferString,
+    image: image.filename,
     status,
     category,
     brand,

@@ -6,12 +6,12 @@ const handleCreateProduct = async (req, res) => {
 
     const image = req.file;
 
-    const imageBufferString = image.buffer.toString('base64');
+    // const imageBufferString = image.buffer.toString('base64');
 
     const productData = {
       name,
       price,
-      imageBufferString,
+      image,
       status,
       category,
       brand,
